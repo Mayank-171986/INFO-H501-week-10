@@ -1,5 +1,6 @@
 import pandas as pd
-from sklearn.linear_model import LinearRegression, DecisionTreeRegressor
+from sklearn.linear_model import LinearRegression
+from sklearn.tree import DecisionTreeRegressor
 import pickle
 
 '''
@@ -49,4 +50,4 @@ model_tree.fit(X, y)
 
 # Save the trained model and roast category mapping to a file
 with open("model_2.pickle", "wb") as f:
-    pickle.dump({"model_tree": model, "roast_cat": roast_category}, f)
+    pickle.dump({"model_tree": model_tree, "roast_cat": roast_category}, f)
