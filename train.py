@@ -51,4 +51,4 @@ model_tree.fit(X, y)
 
 # Save the trained model and roast category mapping to a file
 with open("model_2.pickle", "wb") as f:
-    pickle.dump(model_tree, f)
+    pickle.dump((model_tree, roast_category), f)
